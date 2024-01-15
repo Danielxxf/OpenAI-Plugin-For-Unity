@@ -170,10 +170,10 @@ namespace UnityAIPlugin.Editor
             // 创建居中对齐的元素
             GUILayout.Label("No script selected.");
 
-            GUILayout.FlexibleSpace(); // 在水平方向上创建可伸缩空间
+            GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
 
-            GUILayout.FlexibleSpace(); // 在垂直方向上创建可伸缩空间
+            GUILayout.FlexibleSpace();
             GUILayout.EndArea();
         }
 

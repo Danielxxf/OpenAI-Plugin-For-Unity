@@ -13,7 +13,7 @@ namespace UnityAIPlugin.API
 
         private float temp;
 
-        public OpenAIClient(string _prompt, string _model, float _temp)
+        public OpenAIClient(string _model = "gpt-3.5-turbo", string _prompt = "Your are a helpful assistant.", float _temp = 0.9f)
         {
             context = new List<Message>();
             this.prompt = _prompt;
@@ -21,7 +21,7 @@ namespace UnityAIPlugin.API
             this.model = _model;
         }
 
-        public void SendMessageAsync(string message, bool isRecord, UnityAction<string> onSuccess = null)
+        public void SendMessageAsync(string message, UnityAction<string> onSuccess = null, bool isRecord = true)
         {
             List<Message> messages = WrapMessage(message, isRecord);
 
@@ -31,7 +31,7 @@ namespace UnityAIPlugin.API
         }
 
         // SendMessage Task version
-        public async Task<Response> SendMessageTask(string message, bool isRecord)
+        public async Task<Response> SendMessageTask(string message, bool isRecord = true)
         {
             List<Message> messages = WrapMessage(message, isRecord);
 
@@ -39,7 +39,7 @@ namespace UnityAIPlugin.API
         }
 
         // SendMessage Coroutine version
-        public IEnumerator SendMessageCoroutine(string message, bool isRecord = true, UnityAction<string> onSuccess = null)
+        public IEnumerator SendMessageCoroutine(string message, UnityAction<string> onSuccess = null, bool isRecord = true)
         {
             List<Message> messages = WrapMessage(message, isRecord);
 
@@ -48,7 +48,7 @@ namespace UnityAIPlugin.API
             return OpenAIApi.Instance.SendMessageCoroutine(messages, model, temp, callback);
         }
 
-        public IEnumerator SendMessageStreamCoroutine(string message, bool isRecord = true, UnityAction<string> onResponse = null, UnityAction onComplete = null)
+        public IEnumerator SendMessageStreamCoroutine(string message, UnityAction<string> onResponse = null, UnityAction onComplete = null, bool isRecord = true)
         {
             List<Message> messages = WrapMessage(message, isRecord);
 

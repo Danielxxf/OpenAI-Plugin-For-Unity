@@ -1,6 +1,6 @@
-using UnityAIPlugin.API;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using UnityAIPlugin.API;
 
 namespace UnityAIPlugin.Editor
 {
@@ -26,7 +26,7 @@ namespace UnityAIPlugin.Editor
         private UnityAIEditorClient()
         {
             prompt = "你是一个经验丰富、技艺高超的全栈开发高级工程师，你的回答除了代码（包括代码内注释）以外不能有其他文字说明。";
-            openaiClient = new OpenAIClient(prompt, "gpt-3.5-turbo", 0.5f);
+            openaiClient = new OpenAIClient("gpt-3.5-turbo", prompt);
         }
 
         public async Task<Response> Process(string content, string model, string option)

@@ -7,9 +7,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using System;
-using Org.BouncyCastle.Asn1.Ocsp;
-using System.Text;
-using System.Linq;
 
 namespace UnityAIPlugin.API
 {
