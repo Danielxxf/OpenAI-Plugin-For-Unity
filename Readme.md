@@ -2,7 +2,7 @@
 本插件包装了 OpenAI API，可为 Unity 提供调用 OpenAI api 能力，并且提供了 AI Script Inspector，可以基于 ChatGPT 一键注释、优化、补全脚本文件。
 ## Usage
 ### 设置 API Key 和 API URL
-在系统盘（例如 C 盘）C:\Users\37452\.openai 文件夹下创建并编辑 auth.json 文件；  
+在系统盘（例如 C 盘）C:\Users\username\.openai 文件夹下创建并编辑 auth.json 文件；  
 填入你自己的OpenAI的API Key和API URL。
 ```json
 {
