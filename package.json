@@ -1,0 +1,11 @@
+{
+    "name": "com.danielxxf.unity_ai_tools_plugin",
+    "displayName": "AI Tools Plugin",
+    "version": "0.1.0",
+    "description": "AI tools for Unity.",
+    "author": {
+        "name": "Danielxxf",
+        "email": "dexife102050@gmail.com",
+        "url": "github.com/danielxxf"
+    }
+}

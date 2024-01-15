@@ -1,0 +1,9 @@
+{
+    "name": "Danielxxf.OpenAI.Editor",
+    "references": [
+        "Danielxxf.OpenAI.API"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
